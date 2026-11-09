@@ -1,0 +1,8 @@
+<Project>
+  <PropertyGroup>
+    <BuildRoot>$(HOME)/HurtoBuild/</BuildRoot>
+    <BaseIntermediateOutputPath>$(BuildRoot)obj/</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(BuildRoot)bin/</BaseOutputPath>
+    <MSBuildProjectExtensionsPath>$(BuildRoot)obj/</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+</Project>

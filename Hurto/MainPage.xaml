@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Hurto.MainPage"
+             Title="Гуртожиток"
+             BackgroundColor="{AppThemeBinding Light=#FFFFFF, Dark=#1E1E1E}">
+
+    <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,*,*" Padding="16" RowSpacing="10">
+
+        <HorizontalStackLayout Grid.Row="0" Spacing="10">
+            <Button Text="Обрати XML-файл" Clicked="OnOpenFile" />
+            <Label x:Name="FileLabel" Text="Файл не обрано" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+
+        <Grid Grid.Row="1" ColumnDefinitions="*,*" ColumnSpacing="10" HeightRequest="150">
+            <Grid RowDefinitions="Auto,*">
+                <Label Text="Атрибут" FontAttributes="Bold" />
+                <CollectionView x:Name="AttributeList" Grid.Row="1" SelectionMode="Single"
+                                SelectionChanged="OnAttributeChanged" />
+            </Grid>
+            <Grid Grid.Column="1" RowDefinitions="Auto,*">
+                <Label Text="Значення" FontAttributes="Bold" />
+                <CollectionView x:Name="ValueList" Grid.Row="1" SelectionMode="Single" />
+            </Grid>
+        </Grid>
+
+        <HorizontalStackLayout Grid.Row="2" x:Name="MethodPanel" Spacing="12">
+            <Label Text="Метод розбору:" VerticalOptions="Center" />
+            <RadioButton GroupName="method" Content="SAX" IsChecked="True" />
+            <RadioButton GroupName="method" Content="DOM" />
+            <RadioButton GroupName="method" Content="LINQ to XML" />
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout Grid.Row="3" Spacing="10">
+            <Button Text="Пошук" Clicked="OnSearch" />
+            <Button Text="У HTML" Clicked="OnTransform" />
+            <Button Text="Clear" Clicked="OnClear" />
+            <Button Text="Вихід" Clicked="OnExit" />
+        </HorizontalStackLayout>
+
+        <Label Grid.Row="4" Text="Результат:" FontAttributes="Bold" />
+
+        <Editor x:Name="OutputEditor" Grid.Row="5" IsReadOnly="True" />
+
+        <WebView x:Name="HtmlView" Grid.Row="6" />
+    </Grid>
+
+</ContentPage>

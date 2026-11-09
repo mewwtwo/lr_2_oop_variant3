@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hostel name="Гуртожиток №3">
+  <student id="1" name="Коваленко Ірина Петрівна" faculty="Інформатики" department="Програмної інженерії" course="2">
+    <residence room="101" checkIn="2024-09-01" checkOut="2025-06-30" />
+    <residence room="205" checkIn="2025-09-01" checkOut="2026-06-30" />
+  </student>
+  <student id="2" name="Шевченко Андрій Олегович" faculty="Інформатики" department="Комп'ютерних наук" course="3" phone="+380501112233">
+    <residence room="205" checkIn="2024-09-01" checkOut="2025-06-30" />
+  </student>
+  <student id="3" name="Мельник Олена Василівна" faculty="Економіки" department="Фінансів">
+    <residence room="312" checkIn="2025-09-01" checkOut="2026-06-30" />
+  </student>
+  <student id="4" name="Бондаренко Максим Ігорович" faculty="Інформатики" department="Програмної інженерії" course="1" phone="+380672223344" scholarship="так">
+    <residence room="101" checkIn="2025-09-01" checkOut="2026-06-30" />
+  </student>
+  <student id="5" name="Ткаченко Софія Андріївна" faculty="Економіки" department="Менеджменту" course="4" scholarship="ні">
+    <residence room="314" checkIn="2023-09-01" checkOut="2024-06-30" />
+    <residence room="314" checkIn="2024-09-01" checkOut="2025-06-30" />
+    <residence room="320" checkIn="2025-09-01" checkOut="2026-06-30" />
+  </student>
+  <student id="6" name="Кравченко Дмитро Сергійович" faculty="Фізики" department="Астрономії" course="2" phone="+380931234567">
+    <residence room="118" checkIn="2025-09-01" checkOut="2026-06-30" />
+  </student>
+</hostel>
